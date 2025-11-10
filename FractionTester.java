@@ -5,6 +5,7 @@ public class FractionTester {
         f.numerator = 12;
         f.denominator = 0;
         System.out.println(f.numerator + "/" + f.denominator);
+        System.out.println(f.toString());
         
         // toString():
 
