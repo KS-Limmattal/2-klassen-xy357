@@ -1,6 +1,6 @@
 public class Fraction {
     static int numberOfFractions;
-    int numerator, denominator;
+    private int numerator, denominator;
     
     @Override
     public String toString() {
@@ -16,13 +16,35 @@ public class Fraction {
     //     this(0, 1);
     // }
 
-    // public void setDenominator(int denominator) {
-    //     if (denominator == 0) {
-    //         throw new ArithmeticException("Division by zero");
-    //     } else {
-    //         this.denominator = denominator;
-    //     }
-    // }
+    public Fraction(int numerator, int denominator) {
+        this.numerator = numerator;
+        this.setDenominator(denominator);
+    }
+
+
+    public void setDenominator(int denominator) {
+        if (denominator == 0) {
+            throw new ArithmeticException("Division by zero");
+        } else {
+            this.denominator = denominator;
+        }
+    }
+
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+
+    public int getDenominator() {
+        return denominator;
+    }
+    
 
     // public void add(Fraction f) {
     //     this.setNumerator(this.numerator * f.denominator + this.denominator * f.numerator);
