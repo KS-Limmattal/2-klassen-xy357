@@ -43,6 +43,12 @@ public class FractionTester {
         // statische Variablen:
         System.out.println(Fraction.numberOfFractions);
 
+        //Konstante
+        final double PI=3.14159;    //Aufgabe 2 a)
+        PI = PI + 1;
+        System.out.println(PI);
+
+
     }
 
 }
