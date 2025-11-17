@@ -8,13 +8,14 @@ public class Fraction {
     }
     
     
-    // public Fraction(Fraction f) {
-    //     this(f.numerator, f.denominator);
-    // }
+    public Fraction(Fraction f) {
+        this(f.numerator, f.denominator);
+        numberOfFractions++;
+    }
 
-    // public Fraction() {
-    //     this(0, 1);
-    // }
+    public Fraction() {
+        this(0, 1);
+    }
 
     public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
@@ -46,17 +47,17 @@ public class Fraction {
     }
     
 
-    // public void add(Fraction f) {
-    //     this.setNumerator(this.numerator * f.denominator + this.denominator * f.numerator);
-    //     this.setDenominator(this.denominator * f.denominator);
-    // }
+    public void add(Fraction f) {
+        this.setNumerator(this.numerator * f.denominator + this.denominator * f.numerator);
+        this.setDenominator(this.denominator * f.denominator);
+    }
 
-    // public static Fraction add(Fraction f, Fraction g) {
-    //     return new Fraction(f.numerator * g.denominator + f.denominator * g.numerator, f.denominator * g.denominator);
-    // }
+    public static Fraction add(Fraction f, Fraction g) {
+        return new Fraction(f.numerator * g.denominator + f.denominator * g.numerator, f.denominator * g.denominator);
+    }
     
-    // public boolean equals(Fraction f) {
-    //     return this.numerator * f.denominator == this.denominator * f.numerator;
-    // }
+    public boolean equals(Fraction f) {
+        return this.numerator * f.denominator == this.denominator * f.numerator;
+    }
 
 }
