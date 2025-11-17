@@ -45,8 +45,8 @@ public class FractionTester {
 
         //Konstante
         final double PI=3.14159;    //Aufgabe 2 a)
-        PI = PI + 1;
-        System.out.println(PI);
+        PI = PI + 1;                //Fehlermeldung weil PI ist final
+        System.out.println(PI);     
 
 
     }
