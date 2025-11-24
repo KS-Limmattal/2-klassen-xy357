@@ -10,7 +10,7 @@ public class Fraction {
     
     public Fraction(Fraction f) {
         this(f.numerator, f.denominator);
-        numberOfFractions++;
+        
     }
 
     public Fraction() {
@@ -20,6 +20,7 @@ public class Fraction {
     public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.setDenominator(denominator);
+        numberOfFractions++;
     }
 
 
@@ -56,6 +57,23 @@ public class Fraction {
         return new Fraction(f.numerator * g.denominator + f.denominator * g.numerator, f.denominator * g.denominator);
     }
     
+    public static Fraction sub(Fraction f, Fraction g) {
+        return new Fraction(f.numerator * g.denominator - f.denominator * g.numerator, f.denominator * g.denominator);
+    }
+
+    public static Fraction mul(Fraction f, Fraction g) {
+        return new Fraction(f.numerator * g.numerator, f.denominator * g.denominator);
+    }
+
+    public static Fraction div(Fraction f, Fraction g) {
+        return new Fraction(f.numerator * g.denominator, f.denominator * g.numerator);
+    }
+    public static Fraction simplify(Fraction f) {
+        int rest;
+        rest= f.numerator % f.denominator;
+        for (; rest !=0; )
+        } else 
+    }
     public boolean equals(Fraction f) {
         return this.numerator * f.denominator == this.denominator * f.numerator;
     }

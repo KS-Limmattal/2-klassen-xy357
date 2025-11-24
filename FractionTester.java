@@ -45,9 +45,17 @@ public class FractionTester {
 
         //Konstante
         final double PI=3.14159;    //Aufgabe 2 a)
-        PI = PI + 1;                //Fehlermeldung weil PI ist final
-        System.out.println(PI);     
-
+        //PI = PI + 1;                //Fehlermeldung weil PI ist final
+        System.out.println(PI);
+        
+        // 5.2.5 weitere Aufgaben
+            // Aufgabe 4
+                //fehlende drei Grundrechenarten
+        Fraction h1= new Fraction(1,2);
+        Fraction h2= new Fraction(1,4);
+        System.out.println(Fraction.sub(h1, h2));
+        System.out.println(Fraction.mul(h1, h2));
+        System.out.println(Fraction.div(h1, h2));
 
     }
 
