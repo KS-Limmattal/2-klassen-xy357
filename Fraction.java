@@ -68,11 +68,35 @@ public class Fraction {
     public static Fraction div(Fraction f, Fraction g) {
         return new Fraction(f.numerator * g.denominator, f.denominator * g.numerator);
     }
+
+    //unfertig
     public static Fraction simplify(Fraction f) {
         int rest;
+        int faktor = 1;
+        int a = f.numerator;
+        int b = f.denominator;
         rest= f.numerator % f.denominator;
-        for (; rest !=0; )
-        } else 
+        if (rest == 0){
+            if (f.numerator <= f.denominator){
+                faktor = f.numerator;
+            } else {
+                faktor = f.denominator;
+            }
+        } else {
+            while (rest !=0){
+            rest= f.numerator % f.denominator;
+            if (rest != 0){
+                faktor = rest;
+            } else {
+                if (f.numerator <= f.denominator){
+                faktor = f.numerator;
+            } else {
+                faktor = f.denominator;
+            }
+            }
+            }
+        }
+        return new Fraction(f.numerator/faktor, f.denominator/faktor);
     }
     public boolean equals(Fraction f) {
         return this.numerator * f.denominator == this.denominator * f.numerator;

@@ -57,6 +57,8 @@ public class FractionTester {
         System.out.println(Fraction.mul(h1, h2));
         System.out.println(Fraction.div(h1, h2));
 
+        Fraction h3 = new Fraction(4,8);
+        System.out.println(Fraction.simplify(h3));
     }
 
 }
